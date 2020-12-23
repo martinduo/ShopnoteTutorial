@@ -29,12 +29,12 @@
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.24.57",
+    "gatsby": "^2.29.2",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
-    "react-dom": "^16.13.1",
+    "react-dom": "^17.0.1",
     "react-feather": "^2.0.8",
     "shortid": "^2.2.16"
   }
