@@ -19,6 +19,7 @@ const Header = props => {
         <Nav.Link href="#features">Features</Nav.Link>
         <Nav.Link href="#pricing">Pricing</Nav.Link>
         <Nav.Link href="#pricing">About</Nav.Link>
+        <Nav.Link href="#home">Help</Nav.Link>
       </Nav>
       <Form inline>
         <Button variant="outline-info">Add</Button>
