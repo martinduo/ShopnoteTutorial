@@ -7,23 +7,24 @@ import { ShoppingBag } from 'react-feather';
 
 const Header = props => {
 
-    return (
-      <Navbar bg="dark" variant="dark" className="header">
-        <Navbar.Brand href="#home">
-            <ShoppingBag size={32}/>
-            {" "}
-            <span>Shopnote</span>
-        </Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Form inline>
-            <Button variant="outline-info">Add</Button>
-        </Form>
-      </Navbar>
-    );
+  return (
+    <Navbar bg="dark" variant="dark" className="header">
+      <Navbar.Brand href="#home">
+        <ShoppingBag size={32} />
+        {" "}
+        <span>Shopnote</span>
+      </Navbar.Brand>
+      <Nav className="mr-auto">
+        <Nav.Link href="#home">Home</Nav.Link>
+        <Nav.Link href="#features">Features</Nav.Link>
+        <Nav.Link href="#pricing">Pricing</Nav.Link>
+        <Nav.Link href="#pricing">About</Nav.Link>
+      </Nav>
+      <Form inline>
+        <Button variant="outline-info">Add</Button>
+      </Form>
+    </Navbar>
+  );
 }
 
 export default Header;
