@@ -1,6 +1,6 @@
 // update-item.js
 
-const query = require("./utils/query");
+const query = require("../utils/query");
 
 const UPDATE_ITEM = `
     mutation($id: ID!, $name: String!, $checked: Boolean!, $urgent: Boolean!){
@@ -16,7 +16,7 @@ const UPDATE_ITEM = `
 exports.handler = async event => {
   const { id, name, checked, urgent } = JSON.parse(event.body);
   const { data, errors } = await query(
-       UPDATE_ITEM, { id, name, checked, urgent });
+    UPDATE_ITEM, { id, name, checked, urgent });
 
   if (errors) {
     return {

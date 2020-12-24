@@ -1,6 +1,6 @@
 //create-shopnote.js
 
-const query = require("./utils/query");
+const query = require("../utils/query");
 
 const CREATE_SHOPNOTE = `
   mutation($name: String!, $description: String!, $updatedAt: Time!, $items: ShopNoteItemsRelation!){
@@ -21,7 +21,7 @@ const CREATE_SHOPNOTE = `
 `;
 
 exports.handler = async event => {
-  
+
   const { name, description, updatedAt, items } = JSON.parse(event.body);
   const { data, errors } = await query(
     CREATE_SHOPNOTE, { name, description, updatedAt, items });

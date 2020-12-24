@@ -1,6 +1,6 @@
 // delete-item.js
 
-const query = require("./utils/query");
+const query = require("../utils/query");
 
 const DELETE_ITEM = `
   mutation($id: ID!) {
@@ -14,7 +14,7 @@ const DELETE_ITEM = `
 exports.handler = async event => {
   const { id } = JSON.parse(event.body);
   const { data, errors } = await query(
-        DELETE_ITEM, { id });
+    DELETE_ITEM, { id });
 
   if (errors) {
     return {

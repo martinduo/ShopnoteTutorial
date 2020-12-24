@@ -1,6 +1,6 @@
 //add-item.js
 
-const query = require("./utils/query");
+const query = require("../utils/query");
 
 const ADD_ITEM = `
   mutation($name: String!, $urgent: Boolean!, $checked: Boolean!, $note: ItemNoteRelation!){
@@ -17,8 +17,8 @@ const ADD_ITEM = `
 `;
 
 exports.handler = async event => {
-  
-  const { name, urgent, checked, note} = JSON.parse(event.body);
+
+  const { name, urgent, checked, note } = JSON.parse(event.body);
   const { data, errors } = await query(
     ADD_ITEM, { name, urgent, checked, note });
 

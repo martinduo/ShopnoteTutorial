@@ -1,6 +1,6 @@
 // delete-shopnote.js
 
-const query = require("./utils/query");
+const query = require("../utils/query");
 
 const DELETE_SHOPNOTE = `
   mutation($id: ID!) {
@@ -14,7 +14,7 @@ const DELETE_SHOPNOTE = `
 exports.handler = async event => {
   const { id } = JSON.parse(event.body);
   const { data, errors } = await query(
-        DELETE_SHOPNOTE, { id });
+    DELETE_SHOPNOTE, { id });
 
   if (errors) {
     return {

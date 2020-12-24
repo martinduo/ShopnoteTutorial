@@ -1,6 +1,6 @@
 // update-shopnote.js
 
-const query = require("./utils/query");
+const query = require("../utils/query");
 
 const UPDATE_SHOPNOTE = `
     mutation($id: ID!, $name: String!){
@@ -14,7 +14,7 @@ const UPDATE_SHOPNOTE = `
 exports.handler = async event => {
   const { id, name } = JSON.parse(event.body);
   const { data, errors } = await query(
-       UPDATE_SHOPNOTE, { id, name });
+    UPDATE_SHOPNOTE, { id, name });
 
   if (errors) {
     return {

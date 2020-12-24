@@ -1,8 +1,8 @@
 // get-shopnotes.js
 
-const query = require("./utils/query");
+const query = require("../utils/query");
 
- const GET_SHOPNOTES = `
+const GET_SHOPNOTES = `
     query {
         allShopNotes {
         data {
@@ -20,21 +20,21 @@ const query = require("./utils/query");
             }
         }
     }
-    }  
+    }
  `;
 
-  exports.handler = async () => {
-     const { data, errors } = await query(GET_SHOPNOTES);
+exports.handler = async () => {
+  const { data, errors } = await query(GET_SHOPNOTES);
 
-     if (errors) {
-        return {
-          statusCode: 500,
-          body: JSON.stringify(errors)
-        };
-     }
+  if (errors) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify(errors)
+    };
+  }
 
-     return {
-       statusCode: 200,
-       body: JSON.stringify({ shopnotes: data.allShopNotes.data })
-     };
-   };
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ shopnotes: data.allShopNotes.data })
+  };
+};
